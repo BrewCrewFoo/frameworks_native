@@ -27,14 +27,7 @@
 #include <ui/DisplayInfo.h>
 #include <ui/PixelFormat.h>
 
-<<<<<<< HEAD
-#include <gui/SurfaceTextureClient.h>
-#ifdef BOARD_EGL_NEEDS_LEGACY_FB
-#include <ui/FramebufferNativeWindow.h>
-#endif
-=======
 #include <gui/Surface.h>
->>>>>>> android-4.3_r2.1
 
 #include <GLES/gl.h>
 #include <EGL/egl.h>
