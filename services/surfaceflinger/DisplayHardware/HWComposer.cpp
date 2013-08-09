@@ -1013,9 +1013,9 @@ public:
     virtual uint32_t getHints() const {
         return getLayer()->hints;
     }
-    virtual int getAndResetReleaseFenceFd() {
+    virtual sp<Fence> getAndResetReleaseFence() {
         // not supported on VERSION_03
-        return -1;
+        return Fence::NO_FENCE;
     }
     virtual void setAcquireFenceFd(int fenceFd) {
         if (fenceFd != -1) {
@@ -1083,6 +1083,9 @@ public:
             visibleRegion.rects = NULL;
         }
 
+    }
+    virtual void setPlaneAlpha(uint8_t alpha) {
+        ALOGE("HWC 0.x can't handle plane alpha");
     }
 };
 // #endif // !HWC_REMOVE_DEPRECATED_VERSIONS
